@@ -8,3 +8,4 @@ Collection of various interview related questions and solutions
 3. Find if str3 is interleaved shuffle of str1 and str2 -> (shuffle_two_strings.cpp)
 4. Verify if Binary Tree is a Binary Search Tree -> (verify_binary_search_tree.cpp) 
 5. Shuffle a word into target word one letter at a time -> (shuffle_two_strings.cpp)
+6. Kth largest element in array -> (k_th_largest.cpp)

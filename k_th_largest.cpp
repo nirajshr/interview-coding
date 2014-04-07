@@ -1,3 +1,7 @@
+// Finds the Kth largest element (rank k) of nums in array
+// Two methods:
+// Method #1: O( N ) but minor bug for duplicates
+// Method #2  O( N + K*Log(N) ) works everytime. uses min heap
 #include "includes/utilities.h"
 #include "includes/priority-queue.h"
 
