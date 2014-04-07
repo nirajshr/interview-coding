@@ -1,6 +1,6 @@
 // finds if any two num in the array sums to a particular target in O(N)
 // shows all the duplicates as well
-#include "includes/utilities.h"
+#include "utilities.h"
 
 #include <set>
 #include <iostream>

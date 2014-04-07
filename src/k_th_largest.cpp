@@ -2,8 +2,8 @@
 // Two methods:
 // Method #1: O( N ) but minor bug for duplicates
 // Method #2  O( N + K*Log(N) ) works everytime. uses min heap
-#include "includes/utilities.h"
-#include "includes/priority-queue.h"
+#include "utilities.h"
+#include "priority-queue.h"
 
 #include <vector>
 #include <iostream>

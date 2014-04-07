@@ -2,7 +2,7 @@
 // while all the intermediate letters are valid english word
 // Given solution below implements just changing 1 letter, implementing other
 // is just a matter of adding more case statements
-#include "includes/data_structures.h"
+#include "data_structures.h"
 #include <iostream>
 #include <vector>
 #include <set>
