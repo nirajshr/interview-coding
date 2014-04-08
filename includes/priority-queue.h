@@ -32,6 +32,7 @@ public:
     }
   }
 
+  size_t size() const { return n; };
   bool empty() const { return n <= 0; }
   static int get_parent(int index) {
     if (index == 1) return -1; //root
@@ -55,6 +56,16 @@ public:
       n++;
       //std::cout << "at n: " << n << std::endl;
       bubble_up(n);
+    }
+  }
+
+  int min() const {
+    if (n < 1) {
+      std::cerr << "Queue empty" << std::endl;
+      return -1;
+    }
+    else {
+      return array[1];
     }
   }
 
@@ -117,11 +128,43 @@ int heap_compare(PriorityQueue const& q, int i, int count, int x) {
   return count;
 }
 
-std::ostream& operator<< (std::ostream& oss, PriorityQueue const& queue) {
-  std::cout << "queye size: " << queue.n << std::endl;
-  for (int i=1; i<queue.n; ++i) {
-    oss << queue.array[i] << std::endl;
+typedef PriorityQueue MinHeap;
+
+class MaxHeap {
+public:
+  MaxHeap() {}
+  MaxHeap(int num_array[], int len) {
+    for (int i=0; i<len; ++i) {
+      insert(num_array[i]);
+    }
   }
+
+  size_t size() const { return heap.size(); };
+  bool empty() const { return heap.empty(); }
+  void insert(int n) { heap.insert(-1 * n); }
+  int max() const { return -1 * heap.min(); }
+  int extract_max() { 
+    int num = heap.extract_min();
+    return -1 * num;
+  }
+
+private:
+    MinHeap heap;
+};
+
+std::ostream& operator<< (std::ostream& oss, MinHeap heap) {
+  while (!heap.empty()) {
+    oss << heap.extract_min() << " ";
+  }
+  oss << std::endl;
+  return oss;
+}
+
+std::ostream& operator<< (std::ostream& oss, MaxHeap heap) {
+  while (!heap.empty()) {
+    oss << heap.extract_max() << " ";
+  }
+  oss << std::endl;
   return oss;
 }
 

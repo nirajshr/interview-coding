@@ -20,3 +20,5 @@ all the files are in src/
 4. Verify if Binary Tree is a Binary Search Tree -> (verify_binary_search_tree.cpp) 
 5. Shuffle a word into target word one letter at a time -> (shuffle_two_strings.cpp)
 6. Kth largest element in array -> (k_th_largest.cpp)
+7. Reverse words in a sentence-> (reverse_words.cpp)
+8. Median of integer stream -> (median_int_stream.cpp)
